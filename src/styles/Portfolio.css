@@ -1,0 +1,87 @@
+/* Portfolio Section Container */
+.portfolio-section {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+/* Heading */
+.portfolio-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/* Subheading */
+.portfolio-intro {
+    font-size: 18px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 40px auto; /* Centered text, with spacing below */
+    line-height: 1.5;
+}
+
+/* Grid Layout for Project Images */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive Grid */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Portfolio Item */
+.portfolio-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Image Styling */
+.portfolio-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0; /* Rounded corners at the top only */
+}
+
+/* 🔹 Fully Responsive Design */
+@media (max-width: 768px) {
+    .portfolio-section {
+        padding: 40px 15px; /* Reduced padding for better fit */
+    }
+
+    .portfolio-section h2 {
+        font-size: 28px;
+    }
+
+    .portfolio-intro {
+        font-size: 16px;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Single column for mobile */
+        gap: 15px;
+    }
+
+    .portfolio-item {
+        border-radius: 8px;
+    }
+
+    .portfolio-item img {
+        max-width: 100%; /* Ensure images don't overflow */
+        height: auto;
+    }
+}
+
+  

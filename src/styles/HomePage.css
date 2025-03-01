@@ -1,0 +1,116 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Hero Section */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding-left: 8%;
+  overflow-x: hidden;
+}
+
+/* Image Section */
+.hero-image {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 1520px;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+/* Overlay Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  color: white;
+  max-width: 40%;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hero-content .paragraph1,
+.hero-content .paragraph2 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+/* Contact Us Button */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #003eff;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: orangered
+
+}
+
+/* 🔹 Fully Responsive for Mobile */
+@media (max-width: 768px) {
+  .hero-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      height: auto;
+      padding: 60px 20px;
+  }
+
+  /* Ensure text is centered on small screens */
+  .hero-content {
+      max-width: 100%;
+      text-align: center;
+      padding: 20px;
+  }
+
+  .hero-content h1 {
+      font-size: 2rem;
+  }
+
+  .hero-content .paragraph1,
+  .hero-content .paragraph2 {
+      font-size: 1rem;
+  }
+
+  .btn {
+      font-size: 1rem;
+      padding: 10px 20px;
+  }
+
+  /* Reduce image height for mobile */
+  .hero-image img {
+      height: 50vh;
+  }
+}
+
+  
+  

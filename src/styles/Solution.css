@@ -1,0 +1,39 @@
+/* Solutions Section */
+.solutions-section {
+    background-color: #fff;   /* White background */
+    color: #333;              /* Dark text */
+    padding: 60px 20px;
+    text-align: center;       /* Center heading & paragraph */
+    font-family: "Poppins", sans-serif; /* Optional custom font */
+    overflow-x: hidden;
+}
+
+.solutions-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #000;              /* Black heading */
+}
+
+.solutions-intro {
+    max-width: 800px;         /* Constrain paragraph width */
+    margin: 0 auto;           /* Center the paragraph */
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* 🔹 Fully Responsive for Mobile */
+@media (max-width: 768px) {
+    .solutions-section {
+        padding: 40px 15px; /* Reduce padding for mobile */
+    }
+
+    .solutions-section h2 {
+        font-size: 24px; /* Adjust heading size */
+    }
+
+    .solutions-intro {
+        font-size: 14px; /* Reduce text size for readability */
+        padding: 0 10px; /* Add slight padding to avoid edge clipping */
+    }
+}

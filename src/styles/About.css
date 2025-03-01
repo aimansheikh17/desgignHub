@@ -1,0 +1,121 @@
+/* Overall About Section */
+.about-section {
+    background-color: #fff;
+    padding: 60px 20px;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+/* Container for Two-Column Layout */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 40px;
+    padding: 0 20px; /* Ensure no overflow */
+}
+
+/* Left Column: Profile Image */
+.profile-image {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 0 auto; /* Centers image */
+}
+
+/* Right Column: Text Content */
+.about-text {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-us {
+    margin-top: 0; /* Remove negative margin */
+}
+
+.about-text li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* 🔹 Fully Responsive for Mobile */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .profile-image {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .profile-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-text {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .about-text h2 {
+        font-size: 28px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .about-text li {
+        font-size: 14px;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    .about-text h2 {
+        font-size: 24px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+
+    .about-text li {
+        font-size: 12px;
+    }
+}
+

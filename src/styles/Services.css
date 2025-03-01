@@ -1,0 +1,77 @@
+/* Services Section Container */
+.services-section {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+/* Section Heading */
+.services-section h2 {
+    font-size: 36px;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+/* Grid Layout for Cards */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Service Card */
+.service-card {
+    background-color: #001f3f; /* Dark Blue */
+    color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    background-color: orangered; /* Hover effect */
+}
+
+/* Card Title */
+.service-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Card Description */
+.service-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* 🔹 Fully Responsive for Mobile */
+@media (max-width: 768px) {
+    .services-section {
+        padding: 40px 15px; /* Reduce padding */
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+        gap: 20px;
+    }
+
+    .service-card {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .service-card h3 {
+        font-size: 18px; /* Adjust heading size */
+    }
+
+    .service-card p {
+        font-size: 14px; /* Adjust paragraph size */
+    }
+
+   
+}

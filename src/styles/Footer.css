@@ -1,0 +1,99 @@
+/* Footer Container */
+.footer {
+    background-color: #001f3f; /* Dark blue background */
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    padding: 30px 20px 10px 20px;
+    
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Wrap on smaller screens */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+  
+  /* Left Column */
+  .footer-left {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .footer-left h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-left h2 span {
+    color: #fbbc05; /* Yellow color for 'Technology' */
+  }
+  
+  .footer-left p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  /* Middle Column: Navigation */
+  .footer-middle {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-middle ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-middle li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-middle a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-middle a:hover {
+    color: #fbbc05; /* Hover color */
+  }
+  
+  /* Right Column: Contact Info */
+  .footer-right {
+    flex: 1;
+    min-width: 220px;
+  }
+  
+  .footer-right p {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  
+  /* Bottom Row */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+      min-width: auto;
+    }
+  }
+  

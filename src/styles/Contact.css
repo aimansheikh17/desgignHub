@@ -1,0 +1,97 @@
+/* Overall Contact Section */
+.contact-section {
+    background-color: #ffffff;
+    padding: 50px 5%;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+/* Section Heading */
+.contact-section h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* Form Container */
+.contact-form {
+    width: 100%;
+    max-width: 500px; /* Prevents extra-wide form */
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input & Textarea */
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Makes inputs fully responsive */
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 400px;
+}
+
+/* Focus Effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #001f3f;
+    box-shadow: 0 0 5px rgba(0, 31, 63, 0.3);
+}
+
+/* Textarea Adjustments */
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Submit Button */
+.contact-form button {
+    width: 100%; /* Full width on mobile */
+    padding: 12px;
+    background-color: #001f3f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #003366;
+}
+
+/* 🔹 Mobile-Friendly Adjustments */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 40px 3%;
+    }
+
+    .contact-section h2 {
+        font-size: 26px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+        padding: 10px;
+        width: 390px;
+    }
+
+    .contact-form button {
+        font-size: 14px;
+        width: 100px;
+    }
+}
