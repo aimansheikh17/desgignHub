@@ -14,16 +14,25 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Submit form data using axios
+  // Submit form data to Web3Forms
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const formPayload = {
+      access_key: "c97ff1c5-aa09-4432-973e-bad4650e67c6", // Replace with your actual Web3Forms API key
+      ...formData,
+    };
+
     try {
-      const response = await axios.post("http://localhost:9090/api/contact", formData);
-      if (response.status === 200) {
+      const response = await axios.post("https://api.web3forms.com/submit", formPayload, {
+        headers: { "Content-Type": "application/json" },
+      });
+
+      if (response.data.success) {
         alert("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", email: "", message: "" }); // Reset form
       } else {
-        alert("Failed to send message.");
+        alert("Failed to send message. Please try again.");
       }
     } catch (error) {
       console.error("Error sending message:", error);

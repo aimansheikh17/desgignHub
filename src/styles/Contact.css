@@ -63,10 +63,11 @@
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 200px;
 }
 
 .contact-form button:hover {
-    background-color: #003366;
+    background-color: orangered;
 }
 
 /* 🔹 Mobile-Friendly Adjustments */
