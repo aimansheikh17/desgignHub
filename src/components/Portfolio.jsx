@@ -2,11 +2,12 @@ import React from "react";
 import '../styles/Portfolio.css';
 
 import proj1 from '../images/quiz.png';
-import proj2 from '../images/ticket.png';
-import proj3 from '../images/employee1.png';
-import proj4 from '../images/hokkah2.png';
-import proj5 from '../images/mosque3.png';
-import proj6 from '../images/head19.png';
+import proj2 from '../images/user customer page.png';
+import proj3 from '../images/ticket.png';
+import proj4 from '../images/employee1.png';
+import proj5 from '../images/hokkah2.png';
+import proj6 from '../images/mosque3.png';
+
 
 
 
