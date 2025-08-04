@@ -1,116 +1,212 @@
-/* General Styles */
+/* General Reset */
 body, html {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
   background-color: #f4f4f4;
+  scroll-behavior: smooth;
 }
 
-/* Hero Section */
+/* Section Styling */
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Hero Container */
 .hero-container {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  overflow: hidden;
   padding-left: 8%;
-  overflow-x: hidden;
-}
-
-/* Image Section */
-.hero-image {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  width: 1520px;
-  height: 100%;
-  z-index: 1;
-}
-
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.6);
-}
-
-/* Overlay Content */
-.hero-content {
-  position: relative;
   z-index: 2;
-  text-align: left;
-  color: white;
-  max-width: 40%;
+}
+
+/* Hero Content (Text) */
+.hero-content {
+  z-index: 3;
+  color: #fff;
+  max-width: 600px;
 }
 
 .hero-content h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
-.hero-content .paragraph1,
+.hero-content .pragraph1,
 .hero-content .paragraph2 {
   font-size: 1.2rem;
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
 
-/* Contact Us Button */
 .btn {
   display: inline-block;
+  margin-top: 20px;
   padding: 12px 24px;
   background: #003eff;
-  color: white;
+  color: #fff;
   font-size: 1.2rem;
-  font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
-  transition: 0.3s;
+  transition: background 0.3s ease;
 }
 
 .btn:hover {
   background: orangered;
-
 }
 
-/* 🔹 Fully Responsive for Mobile */
+/* Video Background Styling */
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-image video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .hero-container {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      height: auto;
-      padding: 60px 20px;
-  }
-
-  /* Ensure text is centered on small screens */
-  .hero-content {
-      max-width: 100%;
-      text-align: center;
-      padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
   }
 
   .hero-content h1 {
-      font-size: 2rem;
+    font-size: 2rem;
+  }
+
+  .hero-content .pragraph1,
+  .hero-content .paragraph2 {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+/* Default styles already shown above */
+
+/* ✅ 600px and below */
+@media (max-width: 600px) {
+  .hero-container {
+    flex-direction: column;
+    height: auto;
+    padding: 60px 16px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.9rem;
   }
 
   .hero-content .paragraph1,
   .hero-content .paragraph2 {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .btn {
-      font-size: 1rem;
-      padding: 10px 20px;
+    font-size: 1rem;
+    padding: 10px 18px;
   }
 
-  /* Reduce image height for mobile */
-  .hero-image img {
-      height: 50vh;
+  .background-video {
+    height: 50vh;
   }
 }
+
+/* ✅ 550px and below */
+@media (max-width: 550px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  .background-video {
+    height: 45vh;
+  }
+}
+
+/* ✅ 500px and below */
+@media (max-width: 500px) {
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+  .btn {
+    font-size: 0.95rem;
+  }
+  .background-video {
+    height: 42vh;
+  }
+}
+
+/* ✅ 450px and below */
+@media (max-width: 450px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+  .hero-content .paragraph1,
+  .hero-content .paragraph2 {
+    font-size: 0.95rem;
+  }
+  .background-video {
+    height: 40vh;
+  }
+}
+
+/* ✅ 400px and below */
+@media (max-width: 400px) {
+  .hero-content h1 {
+    font-size: 1.4rem;
+  }
+  .btn {
+    padding: 9px 16px;
+  }
+  .background-video {
+    height: 38vh;
+  }
+}
+
+/* ✅ 350px and below */
+@media (max-width: 350px) {
+  .hero-content h1 {
+    font-size: 1.3rem;
+  }
+  .hero-content .paragraph1,
+  .hero-content .paragraph2 {
+    font-size: 0.9rem;
+  }
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+  .background-video {
+    height: 35vh;
+  }
+}
+
 
   
   

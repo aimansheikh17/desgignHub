@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/HomePage.css"; // Import CSS file
-import Group8 from '../images/Group8.png' // Replace with your image
+import Group8 from '../images/designhubvideo.mp4'; // Replace with your image
 
 const HomePage = () => {
   return (
@@ -14,7 +14,10 @@ const HomePage = () => {
           <a href="#contact" className="btn">Connect Now</a>
         </div>
         <div className="hero-image">
-          <img src={Group8} alt="Technology" />
+         <video autoPlay muted loop playsInline>
+              <source src={Group8} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
         </div>
       </div>
     </div>
