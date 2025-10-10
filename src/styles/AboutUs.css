@@ -120,7 +120,7 @@ margin-top: -210px;
 @media (max-width: 500px) {
   .about-section {
     padding: 40px 6%;
-    margin-top: -410px;
+    margin-top: -450px;
   }
 
   .about-text h2 {
@@ -138,6 +138,7 @@ margin-top: -210px;
   }
 }
 
+ 
 /* Extra Small Mobiles (≤400px) */
 @media (max-width: 400px) {
   .about-section {
