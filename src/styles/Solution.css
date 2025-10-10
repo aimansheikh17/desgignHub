@@ -1,39 +1,56 @@
-/* Solutions Section */
-.solutions-section {
-    background-color: #fff;   /* White background */
-    color: #333;              /* Dark text */
-    padding: 60px 20px;
-    text-align: center;       /* Center heading & paragraph */
-    font-family: "Poppins", sans-serif; /* Optional custom font */
-    overflow-x: hidden;
+ .solutions-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px 100px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
 }
 
-.solutions-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    font-weight: 600;
-    color: #000;              /* Black heading */
+.solutions-content {
+    background-color: rgb(100 164 175);
+    color: #fff;
+    padding: 30px 40px;
+    max-width: 300px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    margin-top: -210px;
+}
+.solutions-content h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
-.solutions-intro {
-    max-width: 800px;         /* Constrain paragraph width */
-    margin: 0 auto;           /* Center the paragraph */
-    font-size: 16px;
-    line-height: 1.6;
+.solutions-content p {
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-/* 🔹 Fully Responsive for Mobile */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .solutions-section {
-        padding: 40px 15px; /* Reduce padding for mobile */
-    }
+  .solutions-section {
+    padding: 40px 20px;
+    min-height: 350px;
+    background-position: center center;
+  }
 
-    .solutions-section h2 {
-        font-size: 24px; /* Adjust heading size */
-    }
+  .solutions-content {
+    max-width: 100%;
+    padding: 25px;
+    text-align: center;
+  }
 
-    .solutions-intro {
-        font-size: 14px; /* Reduce text size for readability */
-        padding: 0 10px; /* Add slight padding to avoid edge clipping */
-    }
+  .solutions-content h2 {
+    font-size: 28px;
+  }
+
+  .solutions-content p {
+    font-size: 15px;
+  }
 }

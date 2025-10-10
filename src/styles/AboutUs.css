@@ -1,0 +1,188 @@
+/* ==============================
+💠 About Section (Desktop)
+============================== */
+.about-section {
+  background-color: #e5e5e5;
+  padding: 80px 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -210px;
+  height: 400px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Left text content */
+.about-text {
+  flex: 1;
+  min-width: 320px;
+}
+
+.about-text h2 {
+  color: #008ca6;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  margin-top: -230px;
+}
+
+.about-text p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.8;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Right image section */
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+
+.about-image img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+  margin-top: -200px;
+  margin-right: -180px;
+}
+
+/* ==============================
+📱 Mobile & Tablet Responsive
+============================== */
+
+/* Tablets and below (≤900px) */
+@media (max-width: 790px) {
+  .about-section {
+    flex-direction: column;
+    height: auto;
+    margin-top: -350px;
+    padding: 60px 5%;
+  }
+
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        height: 550px;
+    }
+
+  .about-text h2 {
+    font-size: 1.6rem;
+    margin-top: 0;
+  }
+
+     .about-image img {
+        max-width: 50%;
+        margin: 0 auto;
+        margin-top: -240px;
+    }
+}
+
+/* Medium Mobiles (≤600px) */
+@media (max-width: 600px) {
+  .about-section {
+    padding: 50px 6%;
+    margin-top: -390px;
+  }
+
+  
+
+  .about-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .about-image img {
+    max-width: 60%;
+    margin-top: -280px;
+  }
+}
+
+/* Small Mobiles (≤500px) */
+@media (max-width: 500px) {
+  .about-section {
+    padding: 40px 6%;
+    margin-top: -410px;
+  }
+
+  .about-text h2 {
+    font-size: 1.3rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .about-image img {
+    max-width: 60%;
+    margin-top: -250px;
+  }
+}
+
+/* Extra Small Mobiles (≤400px) */
+@media (max-width: 400px) {
+  .about-section {
+    padding: 35px 6%;
+    margin-top: -430px;
+  }
+
+  .about-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .about-text p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .about-image img {
+    max-width: 60%;
+    margin-top: -250px;
+  }
+}
+
+
+
+
+/* Very Small Devices (≤350px) */
+@media (max-width: 350px) {
+  .about-section {
+    padding: 30px 5%;
+    margin-top: -420px;
+  }
+
+  .about-text h2 {
+    font-size: 1.1rem;
+  }
+
+  .about-text p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .about-image img {
+    max-width: 60%;
+    margin-top: -250px;
+  }
+}
+
+

@@ -1,76 +1,81 @@
 import React, { useState } from "react";
-import axios from "axios";
-import '../styles/Contact.css';
+import "../styles/Contact.css";
 
-const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+const ContactForm = () => {
+  const [result, setResult] = useState("");
 
-  // Update state on input change
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending...");
 
-  // Submit form data to Web3Forms
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+    const formData = new FormData(event.target);
+    formData.append("access_key", "YOUR_WEB3FORMS_ACCESS_KEY"); // Replace this with your key
 
-    const formPayload = {
-      access_key: "c97ff1c5-aa09-4432-973e-bad4650e67c6", // Replace with your actual Web3Forms API key
-      ...formData,
-    };
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
 
-    try {
-      const response = await axios.post("https://api.web3forms.com/submit", formPayload, {
-        headers: { "Content-Type": "application/json" },
-      });
+    const data = await response.json();
 
-      if (response.data.success) {
-        alert("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" }); // Reset form
-      } else {
-        alert("Failed to send message. Please try again.");
-      }
-    } catch (error) {
-      console.error("Error sending message:", error);
-      alert("Error sending message.");
+    if (data.success) {
+      setResult("Message sent successfully ✅");
+      event.target.reset();
+    } else {
+      console.log("Error:", data);
+      setResult("Something went wrong ❌");
     }
   };
 
   return (
-    <section className="contact-section" id="contact">
-      <h2>Get in Touch</h2>
-      <form onSubmit={handleSubmit} className="contact-form">
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-        <textarea
-          name="message"
-          placeholder="Write your message here"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        />
-        <button type="submit">Submit</button>
-      </form>
-    </section>
+    <div className="contact-container">
+      <div className="left-section">
+        <h2>Let's Chat</h2>
+        <p>
+          Whether you have a question, want to start a project or simply want to connect.
+          <br />
+          <br />
+          Feel free to <span>send me a message</span> in the contact form.
+        </p>
+      </div>
+
+      <div className="right-section">
+        <h2>Contact</h2>
+        <form className="contact-form" onSubmit={onSubmit}>
+          <label>
+            Name <span className="required">*</span>
+            <input type="text" name="name" placeholder="Enter your name" required />
+          </label>
+
+          <label>
+            Email <span className="required">*</span>
+            <input type="email" name="email" placeholder="Enter your email" required />
+          </label>
+
+          <label>
+            Company
+            <input type="text" name="company" placeholder="Enter your company" />
+          </label>
+
+          <label>
+            Phone
+            <input type="text" name="phone" placeholder="Enter your phone number" />
+          </label>
+
+          <label>
+            Message
+            <textarea name="message" placeholder="Enter your message"></textarea>
+          </label>
+
+          <button type="submit">SUBMIT</button>
+        </form>
+
+        <p className="form-status">{result}</p>
+      </div>
+    </div>
   );
 };
 
-export default Contact;
+export default ContactForm;
+
+

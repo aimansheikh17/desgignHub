@@ -1,58 +1,60 @@
 import React from "react";
-import '../styles/Services.css';
-
+import "../styles/Services.css";
+import appDevIcon from "../images/coding.png";
+import uiuxIcon from "../images/user-interface.png";
+import graphicIcon from "../images/graphic-designer.png";
+import itIcon from "../images/technical-support.png";
 
 const Services = () => {
   return (
     <section className="services-section" id="services">
-      <h2>Services</h2>
+      <h2 className="services-title">Find Out How We Can Help You
+Succeed In Business </h2>
+
       <div className="services-grid">
-        {/* 1. Custom Website Development */}
+        {/* Application Development */}
         <div className="service-card">
-          <h3>Custom Website Development</h3>
+          <img src={appDevIcon} alt="Application Development" />
+          <h3>Application Development</h3>
           <p>
-            Fast, Secure & SEO-Friendly Websites. Get a custom-tailored website aligned to your business needs with modern design and high performance.
+            Build modern, secure, and scalable applications tailored to your
+            business needs with high-end performance.
           </p>
+          {/* 👇 ADD THIS BUTTON */}
+          <button className="read-more-btn">Get Started</button>
         </div>
 
-        {/* 2. E-Commerce Solutions */}
+        {/* UI/UX Design */}
         <div className="service-card">
-          <h3>E-Commerce Solutions</h3>
-          <p>
-            Feature-Rich Online Stores. Secure payment gateways, premium product listings, and user-friendly checkout flows.
-          </p>
-        </div>
-
-        {/* 3. Business Web Apps */}
-        <div className="service-card">
-          <h3>Business Web Apps</h3>
-          <p>
-            Scalable & Efficient Business Solutions. CRM, admin dashboards, automation systems for business growth.
-          </p>
-        </div>
-
-        {/* 4. UI/UX Design */}
-        <div className="service-card">
+          <img src={uiuxIcon} alt="UI/UX Design" />
           <h3>UI/UX Design</h3>
           <p>
-            Modern & User-Friendly Interfaces. Engaging, responsive designs that enhance user experience.
+            Create visually appealing, user-friendly interfaces with intuitive
+            navigation for a seamless user experience.
           </p>
+          <button className="read-more-btn">Get Started</button>
         </div>
 
-        {/* 5. SEO & Performance Optimization */}
+        {/* IT Support */}
         <div className="service-card">
-          <h3>SEO & Performance Optimization</h3>
+          <img src={itIcon} alt="IT Support" />
+          <h3>IT Support</h3>
           <p>
-            Boost Website Speed & Search Ranking. Get faster loading pages and on-page SEO strategies.
+            Reliable IT infrastructure, troubleshooting, and maintenance to keep
+            your business running smoothly.
           </p>
+          <button className="read-more-btn">Get Started</button>
         </div>
 
-        {/* 6. Product Designer */}
+        {/* Graphic Design */}
         <div className="service-card">
-          <h3>Product Designer</h3>
+          <img src={graphicIcon} alt="Graphic Design" />
+          <h3>Graphic Design</h3>
           <p>
-            Innovative Digital Product Designs. From concept to UI/UX, put practical solutions into production.
+            Enhance your brand identity with creative logos, banners, social
+            media posts, and marketing visuals.
           </p>
+          <button className="read-more-btn">Get Started</button>
         </div>
       </div>
     </section>
@@ -60,3 +62,5 @@ const Services = () => {
 };
 
 export default Services;
+
+

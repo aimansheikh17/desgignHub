@@ -1,0 +1,138 @@
+.vision-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  font-family: "Rajdhani", sans-serif;
+  color: #002d3d;
+  background: #fff;
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+
+/* ===== Left Panel ===== */
+.vision-left {
+  flex: 1;
+  min-width: 320px;
+  background: linear-gradient(135deg, #0093b8, #007b94);
+  color: #fff;
+  padding: 60px 50px 100px;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 65% 100%, 0% 100%);
+}
+
+.vision-left .vision-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.vision-left .vision-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 380px;
+}
+
+/* Eye Icon Centered at Bottom */
+.vision-eye-icon {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  color: #007b94;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Right Panel ===== */
+.vision-right {
+  flex: 1;
+  min-width: 320px;
+  background: #7098a38c;
+  padding: 60px 70px;
+  clip-path: polygon(8% 0, 100% 25%, 100% 100%, 0% 100%);
+  position: relative;
+}
+
+.vision-right-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.vision-target-icon {
+  background: #e6f7fb;
+  color: #0093b8;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  margin-top: -150px;
+}
+
+.vision-right .vision-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #0093b8;
+  letter-spacing: 1px;
+      margin-left: -65px;
+    margin-top: 40px;
+}
+
+.vision-right .vision-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #002d3d;
+  margin-bottom: 18px;
+  max-width: 500px;
+}
+
+.vision-list {
+  list-style-type: disc;
+  padding-left: 25px;
+  color: #002d3d;
+}
+
+.vision-list li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .vision-container {
+    flex-direction: column;
+  }
+
+  .vision-left,
+  .vision-right {
+    clip-path: none;
+    padding: 50px 25px;
+  }
+
+  .vision-eye-icon {
+    position: static;
+    transform: none;
+    margin-top: 25px;
+  }
+
+  .vision-right-header {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}

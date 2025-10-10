@@ -1,77 +1,184 @@
-/* Services Section Container */
+/* ---------- General ---------- */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+}
+
 .services-section {
-    background-color: #fff;
-    padding: 60px 20px;
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    overflow-x: hidden;
+  padding: 60px 5%;
+  background: #ffffff;
+  text-align: center;
+  margin-top: -200px;
 }
 
-/* Section Heading */
-.services-section h2 {
-    font-size: 36px;
-    color: #000;
-    margin-bottom: 40px;
+.services-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #000;
 }
 
-/* Grid Layout for Cards */
+/* ---------- Services Grid ---------- */
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-items: center;
 }
 
-/* Individual Service Card */
+/* ---------- Card ---------- */
 .service-card {
-    background-color: #001f3f; /* Dark Blue */
-    color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease;
+  background: linear-gradient(145deg, #0b3d91, #001d5c);
+  color: #ffffff;
+  width: 100%;
+  max-width: 300px;
+  min-height: 280px;
+  padding: 25px 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    background-color: orangered; /* Hover effect */
+  background: #0097a7;
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Card Title */
+.service-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
 .service-card h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  font-weight: 600;
 }
 
-/* Card Description */
 .service-card p {
-    font-size: 16px;
-    line-height: 1.5;
+  font-size: 0.95rem;
+  line-height: 1.4rem;
+  color: #e0e0e0;
 }
 
-/* 🔹 Fully Responsive for Mobile */
+/* ---------- Read More Button ---------- */
+.read-more-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  color: #0097a7;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background: #f1f1f1;
+}
+
+.service-card:hover .read-more-btn {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+/* ---------- Responsive ---------- */
 @media (max-width: 768px) {
-    .services-section {
-        padding: 40px 15px; /* Reduce padding */
-    }
+  .services-title {
+    font-size: 1.8rem;
+  }
 
-    .services-grid {
-        grid-template-columns: 1fr; /* Single column layout for mobile */
-        gap: 20px;
-    }
+  /* ✅ Make cards into a horizontal slider */
+  .services-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding-bottom: 20px;
+    justify-content: flex-start;
+  }
 
-    .service-card {
-        padding: 20px; /* Reduce padding for smaller screens */
-    }
+  .service-card {
+    flex: 0 0 80%;
+    max-width: 80%;
+    scroll-snap-align: center;
+    min-height: 260px;
+            margin-top: 10px;
+  }
 
-    .service-card h3 {
-        font-size: 18px; /* Adjust heading size */
-    }
+  .service-card img {
+    width: 70px;
+    height: 70px;
+  }
 
-    .service-card p {
-        font-size: 14px; /* Adjust paragraph size */
-    }
+  .service-card p {
+    font-size: 0.9rem;
+  }
 
-   
+  /* Optional — smooth scrolling */
+  .services-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .services-grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
+
+@media (max-width: 480px) {
+  .services-section {
+    padding: 40px 10px;
+  }
+
+  .services-title {
+    font-size: 1.6rem;
+  }
+
+  .service-card {
+    flex: 0 0 90%;
+    max-width: 90%;
+    padding: 20px 15px;
+            margin-top: 10px;
+  }
+
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .read-more-btn {
+    font-size: 0.85rem;
+    padding: 6px 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .service-card {
+    flex: 0 0 95%;
+    max-width: 95%;
+    padding: 16px;
+            margin-top: 10px;
+  }
+
+  .service-card h3 {
+    font-size: 1rem;
+  }
+
+  .service-card p {
+    font-size: 0.85rem;
+  }
+}
+

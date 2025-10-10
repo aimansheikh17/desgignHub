@@ -1,52 +1,43 @@
 import React from "react";
-import '../styles/Footer.css'
+import "../styles/Footer.css";
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-container">
-        {/* Left Column: Branding & Description */}
-        <div className="footer-left">
-          <h2>
-            Design Hub <span>Technology</span>
-          </h2>
-          <p>
-            DesignHub Technologies is a freelance web development service specializing in custom websites, e-commerce solutions, and business automation.
-          </p>
-        </div>
+    <footer className="footer-container">
+      <h3 className="footer-heading">
+        FOLLOW US ON SOCIAL MEDIA FOR MORE INDUSTRY INSIGHTS
+      </h3>
 
-        {/* Middle Column: Navigation Links */}
-        <div className="footer-middle">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#solutions">Solutions</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-
-        {/* Right Column: Contact Info */}
-        <div className="footer-right">
-          <p>Location: Mangalore</p>
-          <p>Email: mohammedaiman2020@gmail.com</p>
-          <p>
-            WhatsApp:{" "}
-            <a
-              href="https://wa.me/918722552732?text=Hello%20DesignHub%20Technologies"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Chat Now
-            </a>
-          </p>
-        </div>
+      <div className="social-icons">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <FaFacebookF />
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <FaTwitter />
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+          <FaLinkedinIn />
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+          <FaYoutube />
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <FaInstagram />
+        </a>
       </div>
 
-      <div className="footer-bottom">
-        <p>© 2025 DesignHub Technologies. All Rights Reserved.</p>
+      <div className="footer-links">
+        <a href="#terms">Terms of Service</a>
+        <span>|</span>
+        <a href="#privacy">Privacy Policy</a>
+        <span>|</span>
+        <a href="#refund">Refund Policy</a>
       </div>
+
+      <p className="copyright">
+        © Copyright {new Date().getFullYear()} DesignHub Technologies. All Rights Reserved
+      </p>
     </footer>
   );
 };
