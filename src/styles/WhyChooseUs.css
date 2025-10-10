@@ -5,6 +5,7 @@
   font-family: "Rajdhani", sans-serif;
   color: #002d3d;
   text-align: center;
+  overflow-x: hidden;
 }
 
 /* ===== Header ===== */
@@ -27,12 +28,13 @@
 /* ===== Grid ===== */
 .whychoose-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   justify-content: center;
   align-items: stretch;
 }
 
+/* ===== Card ===== */
 .whychoose-card {
   background: #ffffff;
   border-radius: 16px;
@@ -41,11 +43,27 @@
   transition: all 0.3s ease;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   width: 350px;
+  flex-shrink: 0;
 }
 
 .whychoose-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #0093b8, #007b94);
+  color: #ffffff;
+}
+
+/* Hover inner elements */
+.whychoose-card:hover h3,
+.whychoose-card:hover p {
+  color: #ffffff;
+}
+
+.whychoose-card:hover .whychoose-icon {
+  background: #ffffff;
+  color: #0093b8;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
 }
 
 /* ===== Icon ===== */
@@ -76,59 +94,45 @@
   line-height: 1.6;
 }
 
-/* ===== Grid (Fixed 3 per row) ===== */
-.whychoose-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  justify-content: center;
-  align-items: stretch;
-}
-
-
-.whychoose-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(135deg, #0093b8, #007b94);
-  color: #ffffff;
-}
-
-/* Make sure inner text and icon also change on hover */
-.whychoose-card:hover h3,
-.whychoose-card:hover p {
-  color: #ffffff;
-}
-
-.whychoose-card:hover .whychoose-icon {
-  background: #ffffff;
-  color: #0093b8;
-  transform: scale(1.1);
-  transition: all 0.3s ease;
-}
-
-
-/* Responsive adjustment for smaller screens */
+/* ===== Responsive Grids ===== */
 @media (max-width: 992px) {
   .whychoose-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 600px) {
-  .whychoose-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-/* ===== Responsive ===== */
+/* ===== MOBILE SLIDER VIEW ===== */
 @media (max-width: 768px) {
   .whychoose-container {
-    padding: 60px 25px;
+    padding: 60px 20px;
+  }
+
+  .whychoose-header h2 {
+    font-size: 2rem;
+  }
+
+  .whychoose-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding-bottom: 20px;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
   }
 
   .whychoose-card {
-    padding: 35px 20px;
+    flex: 0 0 85%; /* Each card takes ~85% of screen width */
+    scroll-snap-align: center;
+    border-radius: 16px;
+    width: auto;
+  }
+
+  /* Hide scrollbar */
+  .whychoose-grid::-webkit-scrollbar {
+    display: none;
   }
 
   .whychoose-icon {
@@ -137,7 +141,27 @@
     font-size: 26px;
   }
 
-  .whychoose-header h2 {
-    font-size: 2rem;
+  .whychoose-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .whychoose-card p {
+    font-size: 0.95rem;
   }
 }
+
+/* ===== Extra Small Phones ===== */
+@media (max-width: 480px) {
+  .whychoose-card {
+    flex: 0 0 90%;
+  }
+
+  .whychoose-card h3 {
+    font-size: 1rem;
+  }
+
+  .whychoose-card p {
+    font-size: 0.85rem;
+  }
+}
+
