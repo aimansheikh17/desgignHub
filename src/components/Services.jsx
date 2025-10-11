@@ -3,7 +3,7 @@ import "../styles/Services.css";
 import appDevIcon from "../images/coding.png";
 import uiuxIcon from "../images/user-interface.png";
 import graphicIcon from "../images/graphic-designer.png";
-import itIcon from "../images/technical-support.png";
+import itIcon from "../images/social-media.png";
 
 const Services = () => {
   return (
@@ -35,13 +35,12 @@ Succeed In Business </h2>
           <button className="read-more-btn">Get Started</button>
         </div>
 
-        {/* IT Support */}
+        {/* Digital Marketing */}
         <div className="service-card">
           <img src={itIcon} alt="IT Support" />
-          <h3>IT Support</h3>
+          <h3>Digital Marketing</h3>
           <p>
-            Reliable IT infrastructure, troubleshooting, and maintenance to keep
-            your business running smoothly.
+            Our team creates data-driven campaigns that boost your brand, engage your audience, and drive measurable growth.
           </p>
           <button className="read-more-btn">Get Started</button>
         </div>

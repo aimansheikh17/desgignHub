@@ -19,9 +19,9 @@ const WhyChooseUs = () => {
       text: "We build responsive, high-performance websites using the latest technologies — optimized for speed and scalability.",
     },
     {
-      icon: "fa-headset",
-      title: "Reliable IT Support",
-      text: "Our technical experts ensure your systems stay secure and up-to-date with fast, proactive support.",
+      icon: "fa-bullhorn",
+      title: "Digital Marketing",
+      text: "We combine creativity, strategy, and data to deliver campaigns that grow your brand and deliver real results.",
     },
     {
       icon: "fa-clock",
