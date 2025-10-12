@@ -52,10 +52,10 @@ const works = [
   },
 ];
 
-
 const OurWorks = () => {
   return (
-    <section className="ourworks-section">
+    // Added id="portfolio" to make the navbar link scroll here
+    <section className="ourworks-section" id="portfolio">
       <div className="ourworks-header">
         <h3>Our Works</h3>
         <h2>Latest Works</h2>

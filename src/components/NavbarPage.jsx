@@ -68,12 +68,12 @@ const Navbar = () => {
           </a>
           <ul className={`dropdown-menu ${openDropdown === "about" ? "show" : ""}`}>
             <li>
-              <a href="#vision" onClick={() => setIsOpen(false)}>
+              <a href="/vision" onClick={() => setIsOpen(false)}>
                 Our Vision & Mission
               </a>
             </li>
             <li>
-              <a href="#company" onClick={() => setIsOpen(false)}>
+              <a href="/company" onClick={() => setIsOpen(false)}>
                 Our Company
               </a>
             </li>

@@ -1,0 +1,138 @@
+/* ---------- General ---------- */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+}
+
+/* ---------- Section Wrapper ---------- */
+.aboutus-section {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* ---------- Top Banner ---------- */
+.aboutus-banner {
+  width: 100%;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- Content Section ---------- */
+.aboutus-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 60px 5%;
+  position: relative;
+}
+
+/* ---------- Text Section ---------- */
+.aboutus-text {
+  flex: 1 1 50%;
+  padding-right: 40px;
+}
+
+.aboutus-text h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-decoration: underline;
+      margin-top: -100px;
+    
+}
+
+.aboutus-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* ---------- Images Section ---------- */
+.aboutus-images {
+  flex: 1 1 45%;
+  position: relative;
+}
+
+.image-card {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.image-card img {
+  width: 80%;
+  position: relative;
+  margin-top: -180px; /* controls how much it overlaps under banner */
+  margin-left: 200px;
+  z-index: 1; /* keeps image below the banner */
+   
+}
+
+.aboutus-banner {
+  position: relative;
+  z-index: 2; /* ensures banner stays above image */
+}
+
+
+
+/* ---------- Overlay Squares ---------- */
+.overlay-square {
+  position: absolute;
+  border-radius: 8px;
+  z-index: 0;
+  opacity: 0.9;
+}
+
+.image-card.top .overlay-square.blue {
+  width: 140px;
+  height: 140px;
+  background: rgba(63, 81, 181, 0.85);
+  top: -50px;
+  right: -50px;
+  transform: rotate(45deg);
+}
+
+.image-card.bottom .overlay-square.yellow {
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 235, 59, 0.9);
+  bottom: -60px;
+  left: -50px;
+  transform: rotate(45deg);
+}
+
+.image-card.bottom .overlay-square.cyan {
+  width: 120px;
+  height: 120px;
+  background: rgba(0, 188, 212, 0.8);
+  bottom: -100px;
+  right: -30px;
+  transform: rotate(45deg);
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 992px) {
+  .aboutus-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aboutus-text {
+    padding-right: 0;
+  }
+
+  .aboutus-images {
+    margin-top: 40px;
+  }
+
+  .overlay-square {
+    display: none; /* optional: hide decorative shapes on mobile */
+  }
+}
+

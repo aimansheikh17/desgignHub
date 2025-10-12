@@ -15,6 +15,9 @@ import Contact from "./components/Contact";
 // Pages
 import WebDevelopment from "./pages/WebDevelopment";
 import DigitalMarketing from "./pages/DigitalMarketing";
+import GraphicsDesign from "./pages/GraphicsDesign";
+import About from "./pages/About";
+import VisionMission from "./pages/VisionMission";
 
 export default function App() {
   return (
@@ -42,6 +45,9 @@ export default function App() {
         {/* Web Development Page */}
         <Route path="/web-development" element={<WebDevelopment />} />
         <Route path="/digital-marketing" element={<DigitalMarketing />} />
+        <Route path="/graphic" element={<GraphicsDesign />} />
+        <Route path="/company" element={<About />} />
+        <Route path="/vision" element={<VisionMission />} />
       </Routes>
 
       <Footer />

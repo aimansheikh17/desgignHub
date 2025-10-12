@@ -3,7 +3,7 @@ import "../styles/Vision.css";
 
 const VisionSection = () => {
   return (
-    <section className="vision-container">
+    <section className="vision-container" id="vision">
       {/* Left side */}
       <div className="vision-left">
         <h2 className="vision-heading">OUR<br />VISION</h2>

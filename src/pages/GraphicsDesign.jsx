@@ -1,11 +1,11 @@
 import React from "react";
 import "../styles/GraphicsDesign.css";
 import banner from "../images/solutionbox1.png"; // replace with your own banner image
-import branding from "../images/branding.jpg";
-import logo from "../images/logo.jpg";
-import brochure from "../images/brochure.jpg";
+import branding from "../images/brand.jpeg";
+import logo from "../images/dhtlogo8.png";
+import brochure from "../images/brochures.jpeg";
 import social from "../images/socialmedia.jpg";
-import packaging from "../images/packaging.jpg";
+import packaging from "../images/Product.jpeg";
 
 const GraphicsDesign = () => {
   return (
@@ -69,7 +69,7 @@ const GraphicsDesign = () => {
         {/* Packaging Design */}
         <div className="graphics-card">
           <img src={packaging} alt="Packaging Design" />
-          <h3>Packaging Design</h3>
+          <h3>Product & Packaging Design</h3>
           <ul>
             <li>Creative packaging concepts that attract and communicate value.</li>
             <li>Modern designs tailored to your product and audience.</li>
