@@ -4,6 +4,7 @@ body {
   background: #ffffff;
 }
 
+/* ---------- Main Section ---------- */
 .visionmission-section {
   width: 100%;
   overflow: hidden;
@@ -30,7 +31,7 @@ body {
   align-items: flex-start;
   padding: 60px 5%;
   position: relative;
-  margin-top: -150px; /* overlaps under banner */
+  margin-top: -150px; /* overlap under banner */
 }
 
 .vision-text {
@@ -41,6 +42,7 @@ body {
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 20px;
+  color: #051862;
 }
 
 .vision-text p {
@@ -61,7 +63,6 @@ body {
   transform: rotate(-10deg);
   margin-left: 120px;
   margin-top: -30px;
-  
   z-index: 1;
   position: relative;
 }
@@ -84,6 +85,7 @@ body {
   font-weight: 700;
   margin-bottom: 20px;
   margin-top: -100px;
+  color: #051862;
 }
 
 .mission-text p {
@@ -100,12 +102,11 @@ body {
 }
 
 .mission-image img {
-    width: 100%;
-    margin-left: 50px;
-    z-index: 2;
-    position: relative;
-    margin-left: -100px;
-    margin-top: -100px;
+  width: 100%;
+  margin-left: -100px;
+  margin-top: -100px;
+  z-index: 2;
+  position: relative;
 }
 
 /* ---------- Responsive ---------- */
@@ -113,14 +114,66 @@ body {
   .vision-section,
   .mission-section {
     flex-direction: column;
+    align-items: center;
     text-align: center;
+    padding: 40px 20px;
+    margin-top: 0;
+  }
+
+  .vision-text,
+  .mission-text {
+    flex: none;
+    width: 100%;
+     
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .vision-text h2,
+  .mission-text h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+
+  .vision-text p,
+  .mission-text p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .vision-image,
+  .mission-image {
+    flex: none;
+    width: 100%;
+    margin: 30px auto 0;
+    display: flex;
+    justify-content: center;
   }
 
   .vision-image img,
   .mission-image img {
     transform: rotate(0deg);
-    margin: 30px auto;
-    width: 90%;
+    width: 85%;
+    margin: 0;
+    border-radius: 10px;
+    margin-top: -50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .vision-text h2,
+  .mission-text h2 {
+    font-size: 22px;
+  }
+
+  .vision-text p,
+  .mission-text p {
+    font-size: 14px;
+  }
+
+  .vision-image img,
+  .mission-image img {
+    width: 70%;
   }
 }
 
