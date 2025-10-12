@@ -8,8 +8,9 @@ import itIcon from "../images/social-media.png";
 const Services = () => {
   return (
     <section className="services-section" id="services">
-      <h2 className="services-title">Find Out How We Can Help You
-Succeed In Business </h2>
+      <h2 className="services-title">
+        Find Out How We Can Help You Succeed In Business
+      </h2>
 
       <div className="services-grid">
         {/* Application Development */}
@@ -20,8 +21,6 @@ Succeed In Business </h2>
             Build modern, secure, and scalable applications tailored to your
             business needs with high-end performance.
           </p>
-          {/* 👇 ADD THIS BUTTON */}
-          <button className="read-more-btn">Get Started</button>
         </div>
 
         {/* UI/UX Design */}
@@ -32,17 +31,16 @@ Succeed In Business </h2>
             Create visually appealing, user-friendly interfaces with intuitive
             navigation for a seamless user experience.
           </p>
-          <button className="read-more-btn">Get Started</button>
         </div>
 
         {/* Digital Marketing */}
         <div className="service-card">
-          <img src={itIcon} alt="IT Support" />
+          <img src={itIcon} alt="Digital Marketing" />
           <h3>Digital Marketing</h3>
           <p>
-            Our team creates data-driven campaigns that boost your brand, engage your audience, and drive measurable growth.
+            Our team creates data-driven campaigns that boost your brand, engage
+            your audience, and drive measurable growth.
           </p>
-          <button className="read-more-btn">Get Started</button>
         </div>
 
         {/* Graphic Design */}
@@ -53,7 +51,6 @@ Succeed In Business </h2>
             Enhance your brand identity with creative logos, banners, social
             media posts, and marketing visuals.
           </p>
-          <button className="read-more-btn">Get Started</button>
         </div>
       </div>
     </section>
@@ -61,5 +58,6 @@ Succeed In Business </h2>
 };
 
 export default Services;
+
 
 
