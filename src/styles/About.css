@@ -15,11 +15,15 @@ body {
 /* ---------- Top Banner ---------- */
 .aboutus-banner {
   width: 100%;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
 }
 
 .banner-img {
   width: 100%;
-  height: auto;
+  height: 500px; /* default banner height for large screens */
+  object-fit: cover; /* keeps image nicely cropped and full */
   display: block;
 }
 
@@ -28,6 +32,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-start;
   padding: 60px 5%;
   position: relative;
 }
@@ -43,8 +48,8 @@ body {
   font-weight: 700;
   margin-bottom: 20px;
   text-decoration: underline;
-      margin-top: -100px;
-    
+  margin-top: -80px;
+  color: #002d3d;
 }
 
 .aboutus-text p {
@@ -58,6 +63,7 @@ body {
 .aboutus-images {
   flex: 1 1 45%;
   position: relative;
+  text-align: right;
 }
 
 .image-card {
@@ -68,18 +74,10 @@ body {
 .image-card img {
   width: 80%;
   position: relative;
-  margin-top: -180px; /* controls how much it overlaps under banner */
+  margin-top: -160px;
   margin-left: 200px;
-  z-index: 1; /* keeps image below the banner */
-   
+  z-index: 1;
 }
-
-.aboutus-banner {
-  position: relative;
-  z-index: 2; /* ensures banner stays above image */
-}
-
-
 
 /* ---------- Overlay Squares ---------- */
 .overlay-square {
@@ -92,7 +90,7 @@ body {
 .image-card.top .overlay-square.blue {
   width: 140px;
   height: 140px;
-  background: rgba(63, 81, 181, 0.85);
+  background: rgba(0, 147, 184, 0.85);
   top: -50px;
   right: -50px;
   transform: rotate(45deg);
@@ -101,7 +99,7 @@ body {
 .image-card.bottom .overlay-square.yellow {
   width: 150px;
   height: 150px;
-  background: rgba(255, 235, 59, 0.9);
+  background: rgba(255, 230, 0, 0.9);
   bottom: -60px;
   left: -50px;
   transform: rotate(45deg);
@@ -118,21 +116,77 @@ body {
 
 /* ---------- Responsive Design ---------- */
 @media (max-width: 992px) {
+  /* Banner fix */
+  .banner-img {
+    height: 320px; /* keep visible height */
+    object-fit: cover; /* ensures full-width image coverage */
+    object-position: center; /* centers image properly */
+  }
+
   .aboutus-content {
     flex-direction: column;
     text-align: center;
+    padding: 40px 6%;
   }
 
   .aboutus-text {
+    flex: 1 1 100%;
     padding-right: 0;
+    margin-top: 0;
+  }
+
+  .aboutus-text h2 {
+    font-size: 28px;
+    margin-top: 20px;
+  }
+
+  .aboutus-text p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444;
   }
 
   .aboutus-images {
-    margin-top: 40px;
+    flex: 1 1 100%;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .image-card img {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-left: 0;
+    transform: none;
   }
 
   .overlay-square {
-    display: none; /* optional: hide decorative shapes on mobile */
+    display: none;
   }
 }
+
+/* ---------- Extra Small Screens ---------- */
+@media (max-width: 576px) {
+  .banner-img {
+    height: 950px; /* smaller but still tall enough */
+    object-fit: cover;
+  }
+
+  .aboutus-text h2 {
+    font-size: 24px;
+  }
+
+  .aboutus-text p {
+    font-size: 14px;
+  }
+
+  .aboutus-content {
+    padding: 30px 5%;
+  }
+
+  .image-card img {
+    width: 95%;
+  }
+}
+
 
